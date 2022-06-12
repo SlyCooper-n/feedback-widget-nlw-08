@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "merge": "git switch main && git merge dev && git push && git switch dev"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.4",
