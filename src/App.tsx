@@ -1,5 +1,11 @@
+import { WidgetBtn } from "./components/modules";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <WidgetBtn />
+    </div>
+  );
 }
 
 export default App;
