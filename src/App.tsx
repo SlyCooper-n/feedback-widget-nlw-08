@@ -1,4 +1,4 @@
-import { WidgetBtn } from "./components/modules";
+import { WidgetBtn } from "./components/modules/WidgetBtn";
 
 function App() {
   return (
