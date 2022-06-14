@@ -12,6 +12,7 @@ export const FeedbackTypeStep = ({
     <>
       <header>
         <span className="text-xl leading-6">Give your feedback</span>
+
         <CloseBtn />
       </header>
 
@@ -23,6 +24,7 @@ export const FeedbackTypeStep = ({
             className="flex-1 w-24 py-5 flex flex-col items-center gap-2 bg-zinc-800 border-2 border-transparent rounded-lg hover:border-brand-500 focus:border-brand-500 focus:outline-none"
           >
             <img src={btn.image.src} alt={btn.image.alt} />
+
             <span className="text-sm">{btn.title}</span>
           </button>
         ))}
