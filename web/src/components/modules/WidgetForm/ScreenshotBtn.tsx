@@ -29,7 +29,7 @@ export const ScreenshotBtn = ({
       <button
         type="button"
         onClick={() => onScreenshotTake(null)}
-        className="w-10 h-10 hover:scale-[2] focus:scale-[2] lg:hover:scale-[2.75] lg:focus:scale-[2.75] p-1 flex justify-end items-end text-zinc-400 hover:text-zinc-100 border-transparent rounded-[4px] outline-none focus:ring-2 focus:ring-brand-500 ring-offset-2 ring-offset-zinc-900 transition-all overflow-hidden"
+        className="w-10 h-10 hover:scale-[2] focus:scale-[2] lg:hover:scale-[2.75] lg:focus:scale-[2.75] p-1 flex justify-end items-end text-zinc-400 hover:text-zinc-100 border-transparent rounded-[4px] outline-none focus:ring-2 focus:ring-brand-500 ring-offset-2 ring-offset-zinc-900 transition-all overflow-hidden z-20"
         style={{
           backgroundImage: `url(${screenshot})`,
           backgroundSize: "cover",
