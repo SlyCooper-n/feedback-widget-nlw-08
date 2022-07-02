@@ -1,25 +1,17 @@
-import { Request, Response } from "express";
-import { prisma } from "./prisma";
+import express, { Express } from "express";
+import { routes } from "./routes";
 
-const express = require("express");
+const app: Express = express();
 
-const app = express();
+const port = process.env.PORT || 3333;
 
 // middleware
 app.use(express.json());
 
-app.post("/", async (req: Request, res: Response) => {
-  const feedback = await prisma.feedback.create({
-    data: {
-      ...req.body,
-    },
-  });
+app.use(routes);
 
-  return res.status(201).json({ data: feedback, message: "Feedback received" });
-});
-
-app.listen(3333, () => {
+app.listen(port, () => {
   console.log(
-    "Server started on port 3333 \nOpen in the browser: http://localhost:3333"
+    "\nServer started on port 3333\nOpen in the browser: http://localhost:3333"
   );
 });
