@@ -37,6 +37,10 @@ export class SubmitFeedbackUseCase {
 
     // * RIGHT WAY TO DO IT, following the SOLID principles
 
+    if (!type || !comment) {
+      throw new Error("Type and comment are required");
+    }
+
     if (screenshot && !screenshot.startsWith("data:image/png/base64")) {
       throw new Error("Screenshot must be a valid URL");
     }

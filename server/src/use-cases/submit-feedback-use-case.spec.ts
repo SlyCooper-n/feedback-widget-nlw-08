@@ -1,4 +1,4 @@
-// import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { SubmitFeedbackUseCase } from "./submit-feedback-use-case";
 
 describe("Submit Feedback", () => {
