@@ -6,6 +6,7 @@ export default defineConfig({
     root: "./src",
     coverage: {
       enabled: true,
+      exclude: ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     },
   },
 });
