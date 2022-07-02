@@ -1,9 +1,18 @@
-const express = require("express");
+import cors from "cors";
+import express, { Express } from "express";
+import { routes } from "./routes";
 
-const app = express();
+const app: Express = express();
 
-app.listen(3333, () => {
+const port = process.env.PORT || 3333;
+
+// middleware
+app.use(cors({}));
+app.use(express.json());
+app.use(routes);
+
+app.listen(port, () => {
   console.log(
-    "Server started on port 3333 \nOpen in the browser: http://localhost:3333"
+    "\nServer started on port 3333\nOpen in the browser: http://localhost:3333"
   );
 });
