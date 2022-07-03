@@ -10,7 +10,8 @@ import { ScreenshotBtn } from "../../../widgets/ScreenshotBtn";
 import { styles } from "../Steps.style";
 
 export const FormStep = () => {
-  const { feedbackType, returnBack, sendFeedback } = useFeedback();
+  const { feedbackType, returnBack, sendFeedback, feedbackSending } =
+    useFeedback();
   const [comment, setComment] = useState("");
 
   const feedbackTypeInfo = feedbackTypes[feedbackType!];
@@ -41,15 +42,20 @@ export const FormStep = () => {
           multiline
           placeholder={feedbackTypeInfo.placeholder}
           placeholderTextColor={theme.colors.text_secondary}
-          // value={comment}
-          // onChange={(e) => setComment(e.target.valueOf())}
+          value={comment}
+          // onChange={(e) => setComment(e.nativeEvent.text)}
+          onChangeText={setComment}
           style={styles.input}
         />
 
         <View style={styles.buttons}>
           <ScreenshotBtn />
 
-          <Button isLoading={false} onPress={sendFeedback}>
+          <Button
+            isLoading={feedbackSending}
+            disabled={comment.trim() === "" ? true : false}
+            onPress={() => sendFeedback(comment)}
+          >
             <Text style={styles.sendBtnText}>Send feedback</Text>
           </Button>
         </View>
