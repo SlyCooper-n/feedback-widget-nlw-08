@@ -62,7 +62,7 @@ export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
       });
 
       bottomSheetRef.current?.expand();
-      console.log(img);
+
       setScreenshot(img);
     }, 500);
   }
@@ -75,10 +75,10 @@ export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
     setFeedbackSending(true);
 
     api
-      .post("/", {
+      .post("", {
         type: feedbackType,
         comment,
-        screenshot: `data:image/png;base64,${screenshot}`,
+        screenshot: screenshot ? `data:image/png/base64, ${screenshot}` : null,
       })
       .then(() => {
         setFeedbackSent(true);
