@@ -1,6 +1,15 @@
+import BottomSheet from "@gorhom/bottom-sheet";
 import { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
-import React, { ReactNode, RefObject, useContext, useState } from "react";
+import { AxiosError } from "axios";
+import React, {
+  ReactNode,
+  RefObject,
+  useContext,
+  useRef,
+  useState,
+} from "react";
 import { captureScreen } from "react-native-view-shot";
+import { api } from "../services/axios";
 import { feedbackTypes } from "./feedbackTypes";
 
 const FeedbackContext = React.createContext({} as FeedbackContextValue);
@@ -8,7 +17,6 @@ const FeedbackContext = React.createContext({} as FeedbackContextValue);
 export type FeedbackType = keyof typeof feedbackTypes;
 
 interface FeedbackContextProps {
-  bottomSheetRef: RefObject<BottomSheetMethods>;
   children: ReactNode;
 }
 
@@ -20,17 +28,19 @@ export interface FeedbackContextValue {
   handleTakeScreeshot: () => Promise<void>;
   removeScreenshot: () => void;
   feedbackSent: boolean;
-  sendFeedback: () => void;
+  sendFeedback: (comment: string) => void;
   restartFeedback: () => void;
+  feedbackSending: boolean;
+  bottomSheetRef: RefObject<BottomSheetMethods>;
 }
 
-export const FeedbackContextProvider = ({
-  bottomSheetRef,
-  children,
-}: FeedbackContextProps) => {
+export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
   const [screenshot, setScreenshot] = useState<string | null>(null);
   const [feedbackSent, setFeedbackSent] = useState(false);
+  const [feedbackSending, setFeedbackSending] = useState(false);
+
+  const bottomSheetRef = useRef<BottomSheet>(null);
 
   function selectFeedbackType(type: FeedbackType) {
     setFeedbackType(type);
@@ -42,17 +52,17 @@ export const FeedbackContextProvider = ({
   }
 
   async function handleTakeScreeshot() {
-    bottomSheetRef.current?.collapse();
+    bottomSheetRef.current?.snapToPosition(0.002);
 
     setTimeout(async () => {
       const img = await captureScreen({
-        format: "jpg",
+        format: "png",
         quality: 0.8,
-        // result: "base64",
+        result: "base64",
       });
 
       bottomSheetRef.current?.expand();
-
+      console.log(img);
       setScreenshot(img);
     }, 500);
   }
@@ -61,8 +71,24 @@ export const FeedbackContextProvider = ({
     setScreenshot(null);
   }
 
-  function sendFeedback() {
-    setFeedbackSent(true);
+  function sendFeedback(comment: string) {
+    setFeedbackSending(true);
+
+    api
+      .post("", {
+        type: feedbackType,
+        comment,
+        screenshot: `data:image/png;base64,${screenshot}`,
+      })
+      .then(() => {
+        setFeedbackSent(true);
+      })
+      .catch((error: AxiosError) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setFeedbackSending(false);
+      });
   }
 
   function restartFeedback() {
@@ -83,6 +109,8 @@ export const FeedbackContextProvider = ({
         feedbackSent,
         sendFeedback,
         restartFeedback,
+        feedbackSending,
+        bottomSheetRef,
       }}
     >
       {children}
