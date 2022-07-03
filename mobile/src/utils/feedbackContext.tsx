@@ -12,13 +12,30 @@ interface FeedbackContextProps {
 export interface FeedbackContextValue {
   feedbackType: FeedbackType | null;
   selectFeedbackType: (type: FeedbackType) => void;
+  returnBack: () => void;
+  screenshot: string | null;
+  handleTakeScreeshot: () => void;
+  removeScreenshot: () => void;
 }
 
 export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
-  const [feedbackType, setFeedbackType] = useState<FeedbackType | null>("BUG");
+  const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
+  const [screenshot, setScreenshot] = useState<string | null>(null);
 
   function selectFeedbackType(type: FeedbackType) {
     setFeedbackType(type);
+  }
+
+  function returnBack() {
+    setFeedbackType(null);
+  }
+
+  function handleTakeScreeshot() {
+    setScreenshot("screenshot");
+  }
+
+  function removeScreenshot() {
+    setScreenshot(null);
   }
 
   return (
@@ -26,6 +43,10 @@ export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
       value={{
         feedbackType,
         selectFeedbackType,
+        returnBack,
+        screenshot,
+        handleTakeScreeshot,
+        removeScreenshot,
       }}
     >
       {children}
