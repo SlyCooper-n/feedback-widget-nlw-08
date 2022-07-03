@@ -78,7 +78,7 @@ export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
       .post("", {
         type: feedbackType,
         comment,
-        screenshot: screenshot ? `data:image/png/base64, ${screenshot}` : null,
+        screenshot: screenshot ? `data:image/png;base64,${screenshot}` : null,
       })
       .then(() => {
         setFeedbackSent(true);
