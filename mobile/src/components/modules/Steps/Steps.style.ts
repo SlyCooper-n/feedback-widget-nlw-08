@@ -69,12 +69,42 @@ export const styles = StyleSheet.create({
   buttons: {
     flexDirection: "row",
   },
-  sendBtn: {
-    flex: 1,
-    justifyContent: "center",
+  sendBtnText: {
+    fontSize: 14,
+    fontFamily: theme.fonts.medium,
+    color: theme.colors.text_on_brand_color,
+  },
+
+  successHeader: {
     alignItems: "center",
   },
-  sendBtnText: {
+  successImg: {
+    width: 36,
+    height: 36,
+    marginTop: 42,
+    marginBottom: 10,
+  },
+  successText: {
+    marginBottom: 24,
+
+    fontSize: 20,
+    fontFamily: theme.fonts.medium,
+    color: theme.colors.text_primary,
+  },
+  successBtn: {
+    height: 40,
+    marginBottom: 56,
+    paddingHorizontal: 24,
+
+    justifyContent: "center",
+    alignItems: "center",
+
+    backgroundColor: theme.colors.surface_secondary,
+    borderRadius: 4,
+  },
+  sendAnotherBtnText: {
+    fontSize: 14,
+    fontFamily: theme.fonts.medium,
     color: theme.colors.text_primary,
   },
 });
