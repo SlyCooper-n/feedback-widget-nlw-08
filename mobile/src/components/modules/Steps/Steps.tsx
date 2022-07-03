@@ -1,24 +1,20 @@
 import { Text, View } from "react-native";
-import {
-  FeedbackContextProvider,
-  useFeedback,
-} from "../../../utils/feedbackContext";
+import { useFeedback } from "../../../utils/feedbackContext";
 import { Copyright } from "../../widgets/Copyright";
-import { FeedbackStep } from "./components/feedbackStep";
+import { FeedbackStep } from "./components/FeedbackStep";
+import { FormStep } from "./components/FormStep";
 import { styles } from "./Steps.style";
 
 export const Steps = () => {
   const { feedbackType } = useFeedback();
 
   return (
-    <FeedbackContextProvider>
-      <View style={styles.container}>
-        <Text style={styles.title}>Leave your feedback</Text>
+    <View style={styles.container}>
+      {!feedbackType && <Text style={styles.title}>Leave your Feedback</Text>}
 
-        {!feedbackType ? <FeedbackStep /> : <Text>{feedbackType}</Text>}
+      {!feedbackType ? <FeedbackStep /> : <FormStep />}
 
-        <Copyright />
-      </View>
-    </FeedbackContextProvider>
+      <Copyright />
+    </View>
   );
 };
