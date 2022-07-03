@@ -11,9 +11,22 @@ interface ButtonProps extends TouchableOpacityProps {
   children: ReactNode;
 }
 
-export const Button = ({ isLoading, children, ...rest }: ButtonProps) => {
+export const Button = ({
+  isLoading,
+  disabled,
+  children,
+  ...rest
+}: ButtonProps) => {
   return (
-    <TouchableOpacity {...rest} style={styles.container}>
+    <TouchableOpacity
+      disabled={disabled}
+      style={
+        !disabled
+          ? styles.container
+          : [styles.container, styles.containerDisabled]
+      }
+      {...rest}
+    >
       {isLoading ? <ActivityIndicator /> : children}
     </TouchableOpacity>
   );

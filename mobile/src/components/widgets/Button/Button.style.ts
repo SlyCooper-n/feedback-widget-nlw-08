@@ -10,4 +10,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 4,
   },
+  containerDisabled: {
+    opacity: 0.6,
+  },
 });
