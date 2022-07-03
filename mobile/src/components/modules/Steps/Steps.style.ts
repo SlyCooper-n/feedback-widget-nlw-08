@@ -52,6 +52,7 @@ export const styles = StyleSheet.create({
   },
   formBody: {
     width: "100%",
+    marginBottom: 28,
     paddingHorizontal: 24,
   },
   input: {
