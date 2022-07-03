@@ -75,7 +75,7 @@ export const FeedbackContextProvider = ({ children }: FeedbackContextProps) => {
     setFeedbackSending(true);
 
     api
-      .post("", {
+      .post("/", {
         type: feedbackType,
         comment,
         screenshot: `data:image/png;base64,${screenshot}`,
