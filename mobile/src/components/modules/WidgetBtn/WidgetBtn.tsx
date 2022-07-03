@@ -30,7 +30,7 @@ export const WidgetBtn = () => {
         handleIndicatorStyle={styles.indicator}
         backgroundStyle={styles.modal}
       >
-        <FeedbackContextProvider>
+        <FeedbackContextProvider bottomSheetRef={bottomSheetRef}>
           <Steps />
         </FeedbackContextProvider>
       </BottomSheet>
