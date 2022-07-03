@@ -6,6 +6,7 @@ import { Text, View } from "react-native";
 import "react-native-gesture-handler";
 import WidgetBtn from "./src/components/modules/WidgetBtn";
 import { theme } from "./src/theme";
+import { FeedbackContextProvider } from "./src/utils/feedbackContext";
 
 export default function App() {
   const [fontsLoaded, error] = useFonts({
@@ -33,7 +34,9 @@ export default function App() {
     >
       <StatusBar style="light" backgroundColor="transparent" translucent />
 
-      <WidgetBtn />
+      <FeedbackContextProvider>
+        <WidgetBtn />
+      </FeedbackContextProvider>
     </View>
   );
 }
