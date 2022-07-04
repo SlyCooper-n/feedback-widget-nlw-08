@@ -1,13 +1,13 @@
 import BottomSheet from "@gorhom/bottom-sheet";
 import { ChatTeardropDots } from "phosphor-react-native";
-import { useRef } from "react";
 import { TouchableOpacity } from "react-native";
 import { theme } from "../../../theme";
+import { useFeedback } from "../../../utils/feedbackContext";
 import { Steps } from "../Steps";
 import { styles } from "./WidgetBtn.style";
 
 export const WidgetBtn = () => {
-  const bottomSheetRef = useRef<BottomSheet>(null);
+  const { bottomSheetRef, restartFeedback } = useFeedback();
 
   function openButtomSheet() {
     bottomSheetRef.current?.expand();
@@ -25,9 +25,10 @@ export const WidgetBtn = () => {
 
       <BottomSheet
         ref={bottomSheetRef}
-        snapPoints={[0.01, 280]}
+        snapPoints={[0.001, 320]}
         handleIndicatorStyle={styles.indicator}
         backgroundStyle={styles.modal}
+        onChange={(snapPoint) => (snapPoint == 0 ? restartFeedback() : null)}
       >
         <Steps />
       </BottomSheet>

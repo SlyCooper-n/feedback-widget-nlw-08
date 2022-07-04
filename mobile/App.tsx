@@ -6,18 +6,19 @@ import { Text, View } from "react-native";
 import "react-native-gesture-handler";
 import WidgetBtn from "./src/components/modules/WidgetBtn";
 import { theme } from "./src/theme";
+import { FeedbackContextProvider } from "./src/utils/feedbackContext";
 
 export default function App() {
-  async () => {
-    await preventAutoHideAsync();
-  };
-
-  const [fontLoaded, error] = useFonts({
+  const [fontsLoaded, error] = useFonts({
     Inter_500Medium,
     Inter_400Regular,
   });
 
-  if (!fontLoaded) return null;
+  if (!fontsLoaded) {
+    async () => await preventAutoHideAsync();
+    return null;
+  }
+
   if (error) return <Text>Error: {error.message}</Text>;
 
   async () => {
@@ -33,7 +34,9 @@ export default function App() {
     >
       <StatusBar style="light" backgroundColor="transparent" translucent />
 
-      <WidgetBtn />
+      <FeedbackContextProvider>
+        <WidgetBtn />
+      </FeedbackContextProvider>
     </View>
   );
 }

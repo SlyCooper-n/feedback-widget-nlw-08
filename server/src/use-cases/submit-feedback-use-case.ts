@@ -41,7 +41,7 @@ export class SubmitFeedbackUseCase {
       throw new Error("Type and comment are required");
     }
 
-    if (screenshot && !screenshot.startsWith("data:image/png/base64")) {
+    if (screenshot && !screenshot.startsWith("data:image/png;base64,")) {
       throw new Error("Screenshot must be a valid URL");
     }
 
@@ -56,8 +56,12 @@ export class SubmitFeedbackUseCase {
       body: [
         `<html>`,
         `<div style="font-family: sans-serif; font-size: 16px; color: #111;">`,
-        `<p><span style="font-weight: bold;">Feedback Type</span>: ${type}</p>`,
-        `<p><span style="font-weight: bold;">Comment</span>: ${comment}</p>`,
+        `<p><b>Feedback Type</b>: ${type}</p>`,
+        `<p><b>Comment</b>: ${comment}</p>`,
+        screenshot &&
+          `<img src="${screenshot}" alt="Screenshot" style="width: 90%; max-width: 400px; display: block;" />`,
+        screenshot &&
+          `<a href="${screenshot}">Click here if you can not see the image</a>`,
         `</div>`,
         `</html>`,
       ].join("\n"),
