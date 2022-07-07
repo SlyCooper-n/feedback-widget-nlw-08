@@ -8,7 +8,7 @@ import { SubmitFeedbackUseCase } from "./use-cases";
 
 export const routes = express.Router();
 
-routes.post("/", async (req: Request, res: Response) => {
+routes.post("/feedbacks", async (req: Request, res: Response) => {
   const submitFeedbackUseCase = new SubmitFeedbackUseCase(
     prismaFeedbacksRepository,
     nodemailerMailAdapter
