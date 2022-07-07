@@ -1,9 +1,7 @@
 import { View } from "react-native";
 import { useFeedback } from "../../../utils/feedbackContext";
 import { Copyright } from "../../widgets/Copyright";
-import { FeedbackStep } from "./components/FeedbackStep";
-import { FormStep } from "./components/FormStep";
-import { SuccessStep } from "./components/SuccessStep";
+import { FeedbackStep, FormStep, SuccessStep } from "./components";
 import { styles } from "./Steps.style";
 
 export const Steps = () => {
