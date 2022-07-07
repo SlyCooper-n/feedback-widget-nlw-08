@@ -6,7 +6,7 @@
 ![Github issues](https://img.shields.io/github/issues/SlyCooper-n/feedback-widget-nlw-08?color=red&style=flat-square)
 [![GitHub license](https://img.shields.io/github/license/SlyCooper-n/feedback-widget-nlw-08?style=flat-square)](https://github.com/SlyCooper-n/feedback-widget-nlw-08/blob/main/LICENSE)
 ![Github commit](https://img.shields.io/github/last-commit/SlyCooper-n/feedback-widget-nlw-08?color=blue&style=flat-square)
-[![Github](https://img.shields.io/badge/-Rockeseat-purple?style=flat-square)](https://github.com/SlyCooper-n)
+[![Github](https://img.shields.io/badge/-Rockeseat-purple?style=flat-square)](https://github.com/Rocketseat)
 
 </div>
 
