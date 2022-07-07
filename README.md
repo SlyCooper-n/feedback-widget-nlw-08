@@ -18,7 +18,7 @@
 
 ## :pushpin: About
 
-This project was developed together with [Rocketseat](https://github.com/Rocketseat), [Diego Fernandes](https://github.com/diego3g) and [Rodrigo](https://github.com/rodrigorgtic) in NLW #8 in order to practise web development using Node.js and Prisma to manage databases.
+This project was developed together with [Rocketseat](https://github.com/Rocketseat), [Diego Fernandes](https://github.com/diego3g) and [Rodrigo Gonçalves](https://github.com/rodrigorgtic) in NLW #8 in order to practise web development using Node.js and Prisma to manage databases.
 
 > For more information about my dev journey, consider visiting my [LinkedIn](https://linkedin.com/in/gabriel-vs-frasao).
 
