@@ -14,7 +14,7 @@
 
 <br />
 
-<img alt="Feedback Widget banner" src="./_docs/banner.png" />
+<div align="center"><img alt="Feedback Widget working" src="./_docs/feedback-widget-opening.png" /></div>
 
 ## :pushpin: About
 
