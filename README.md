@@ -18,9 +18,8 @@
 
 ## :pushpin: About
 
-<p>
 This project was developed together with [Rocketseat](https://github.com/Rocketseat), [Diego Fernandes](https://github.com/diego3g) and [Rodrigo](https://github.com/) in NLW #6 in order to practise web development using Next.js and Firebase to provide real-time rooms. I'll be improving this project from now on to keep evolving my knowledge and maybe create something cool for people to use. Actually, I've made some small features on top of the boilerplate provided by the class, like PWA and dark mode support. But that's not all, I'm aiming to add [this feedback feature](https://github.com/SlyCooper-n/feedback-widget-nlw-08) inside this web app in the near future as well as CI with Github Actions.
-</p>
+
 > For more information about my dev journey, consider visiting my [LinkedIn](https://linkedin.com/in/gabriel-vs-frasao).
 
 ## :hammer: Main tools and libs used
