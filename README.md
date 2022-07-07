@@ -29,9 +29,11 @@ This project was developed together with [Rocketseat](https://github.com/Rockets
 Base tools
 </summary>
 
+- [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [Node.js](https://nodejs.org/en/)
+- [Express](http://expressjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Prisma](https://www.prisma.io/)
 
