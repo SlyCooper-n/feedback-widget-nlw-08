@@ -1,10 +1,11 @@
+import { useState } from "react";
 import bugImg from "../../../images/bug.svg";
 import ideaImg from "../../../images/idea.svg";
 import thoughtImg from "../../../images/thought.svg";
-import { useState } from "react";
-import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
+import { api } from "../../../services/api";
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
 import { FeedbackSuccessStep } from "./Steps/FeedbackSuccessStep";
+import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
 
 export const feedbackBtns = {
   BUG: {
@@ -35,6 +36,12 @@ export const feedbackBtns = {
 
 export type FeedbackType = keyof typeof feedbackBtns;
 
+export interface FeedbackData {
+  type: string;
+  comment: string;
+  screenshot?: string | null;
+}
+
 export const WidgetForm = () => {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
   const [feedbackSent, setFeedbackSent] = useState(false);
@@ -42,6 +49,12 @@ export const WidgetForm = () => {
   function returnBack() {
     setFeedbackType(null);
     setFeedbackSent(false);
+  }
+
+  async function sendFeedback(feedbackData: FeedbackData) {
+    await api.post("/feedbacks", feedbackData);
+
+    setFeedbackSent(true);
   }
 
   return (
@@ -52,14 +65,14 @@ export const WidgetForm = () => {
         <FeedbackContentStep
           feedbackType={feedbackBtns[feedbackType]}
           returnBack={returnBack}
-          sendFeedback={() => setFeedbackSent(true)}
+          sendFeedback={sendFeedback}
         />
       ) : (
         <FeedbackSuccessStep restartFeedback={() => returnBack()} />
       )}
 
       <footer className="text-xs text-neutral-400">
-        Made with ❤ by{" "}
+        Made with 💜 by{" "}
         <a
           href="https://rocketseat.com.br"
           className="underline underline-offset-2"
