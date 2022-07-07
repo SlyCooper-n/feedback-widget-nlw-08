@@ -2,19 +2,19 @@
 
 # Feedback Widget
 
-![Github](https://img.shields.io/badge/Gabe%20Frasz-Feedback%20Widget-gold?style=flat-square)
-![Github issues](https://img.shields.io/github/issues/SlyCooper-n/feedback-widget-nlw-08?color=red&style=flat-square)
+[![Github](https://img.shields.io/badge/Gabe%20Frasz-Feedback%20Widget-gold?style=flat-square)](https://github.com/SlyCooper-n)
+[![Github issues](https://img.shields.io/github/issues/SlyCooper-n/feedback-widget-nlw-08?color=red&style=flat-square)](https://github.com/SlyCooper-n/feedback-widget-nlw-08/issues)
 [![GitHub license](https://img.shields.io/github/license/SlyCooper-n/feedback-widget-nlw-08?style=flat-square)](https://github.com/SlyCooper-n/feedback-widget-nlw-08/blob/main/LICENSE)
 ![Github commit](https://img.shields.io/github/last-commit/SlyCooper-n/feedback-widget-nlw-08?color=blue&style=flat-square)
 [![Github](https://img.shields.io/badge/-Rockeseat-purple?style=flat-square)](https://github.com/Rocketseat)
 
 </div>
 
-> Project made together with Rockeseat to practise Node.js and mobile.
+> Project made together with Rockeseat to practise Node.js, database and mobile.
 
 <br />
 
-<img alt="Feedback Widget homepage banner" src="./_docs/banner.jpeg" />
+<img alt="Feedback Widget banner" src="./_docs/banner.jpeg" />
 
 ## :pushpin: About
 
