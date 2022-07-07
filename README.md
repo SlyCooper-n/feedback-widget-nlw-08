@@ -14,7 +14,7 @@
 
 <br />
 
-<div align="center"><img alt="Feedback Widget working" src="./_docs/feedback-widget-opening.png" /></div>
+<div align="center"><img alt="Feedback Widget working" src="./_docs/feedback-widget-opening.gif" /></div>
 
 ## :pushpin: About
 
