@@ -1,6 +1,8 @@
 import { ArrowLeft } from "phosphor-react";
 import { FormEvent, useState } from "react";
+import { FeedbackData } from "..";
 import { CloseBtn } from "../../../widgets/CloseBtn";
+import { Loading } from "../../../widgets/Loading";
 import { ScreenshotBtn } from "../ScreenshotBtn";
 
 interface FeedbackContentStepProps {
@@ -13,7 +15,7 @@ interface FeedbackContentStepProps {
     placeholder: string;
   };
   returnBack: () => void;
-  sendFeedback: () => void;
+  sendFeedback: (FeedbackData: FeedbackData) => Promise<void>;
 }
 
 export const FeedbackContentStep = ({
@@ -23,6 +25,7 @@ export const FeedbackContentStep = ({
 }: FeedbackContentStepProps) => {
   const [screenshot, setScreenshot] = useState<string | null>(null);
   const [comment, setComment] = useState("");
+  const [isSendingFeedback, setIsSendingFeedback] = useState(false);
 
   function handleFeedbackSubmit(e: FormEvent) {
     e.preventDefault();
@@ -31,8 +34,14 @@ export const FeedbackContentStep = ({
       return;
     }
 
+    setIsSendingFeedback(true);
+
     setComment("");
-    sendFeedback();
+    sendFeedback({
+      type: feedbackType.title,
+      comment,
+      screenshot,
+    });
   }
 
   return (
@@ -75,10 +84,10 @@ export const FeedbackContentStep = ({
 
           <button
             type="submit"
-            disabled={comment.trim() === ""}
+            disabled={comment.trim() === "" || isSendingFeedback}
             className="flex-1 p-2 flex justify-center items-center bg-brand-500 hover:bg-brand-300 text-sm border-transparent rounded-[4px] outline-none focus:ring-2 focus:ring-brand-500 ring-offset-2 ring-offset-zinc-900 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500"
           >
-            Send feedback
+            {isSendingFeedback ? <Loading /> : "Send feedback"}
           </button>
         </footer>
       </form>
