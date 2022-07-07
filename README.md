@@ -18,7 +18,7 @@
 
 ## :pushpin: About
 
-This project was developed together with [Rocketseat](https://github.com/Rocketseat), [Diego Fernandes](https://github.com/diego3g) and [Rodrigo Gonçalves](https://github.com/rodrigorgtic) in NLW #8 in order to practise web development using Node.js and Prisma to manage databases.
+This project was developed together with [Rocketseat](https://github.com/Rocketseat), [Diego Fernandes](https://github.com/diego3g) and [Rodrigo Gonçalves](https://github.com/rodrigorgtic) in NLW #8 in order to practise web development using Node.js and Prisma to manage databases. The most exciting thing I did during the process was the server side with Express and database stuff with Prisma. I also learned a bit about SOLID principles, unit testing (where I prefer to use Vitest instead of Jest) and external APIs such as Mailtrap to handle email shipping. This little feature will be used as a model to build on other apps.
 
 > For more information about my dev journey, consider visiting my [LinkedIn](https://linkedin.com/in/gabriel-vs-frasao).
 
