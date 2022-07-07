@@ -31,8 +31,11 @@ Base tools
 </summary>
 
 - [React](https://reactjs.org/)
+- [React Native](https://reactnative.dev/)
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Prisma](https://www.prisma.io/)
+
 </details>
 
 <details>
@@ -42,6 +45,7 @@ Linters and Formatters
 
 - [Prettier](https://prettier.io/)
 - [.editorConfig](https://editorconfig.org/)
+
 </details>
 
 ## :sparkles: Features
@@ -53,6 +57,7 @@ Linters and Formatters
 ## :rocket: Running this project
 
 **Clone on your machine** (I personally use Github CLI)
+
 ```bash
 # by git
 git clone https://github.com/SlyCooper-n/feedback-widget-nlw-08.git
@@ -62,6 +67,7 @@ gh repo clone SlyCooper-n/feedback-widget-nlw-08
 ```
 
 **Set every thing up**
+
 ```bash
 # enter the project folder
 cd feedback-widget-nlw-08
