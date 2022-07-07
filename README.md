@@ -1,10 +1,6 @@
 <div align="center">
 
-Feedback Widget
-<br />
-<br />
-
-# Letmeask | Q&A rooms
+# Feedback Widget
 
 ![Github](https://img.shields.io/badge/Gabe%20Frasz-Feedback-Widget-gold?style=flat-square)
 ![Github issues](https://img.shields.io/github/issues/SlyCooper-n/feedback-widget-nlw-08?color=red&style=flat-square)
@@ -23,7 +19,7 @@ Feedback Widget
 ## :pushpin: About
 
 <p>
-This project was developed together with [Rocketseat](https://github.com/Rocketseat) and [Diego Fernandes](https://github.com/diego3g) in NLW #6 in order to practise web development using Next.js and Firebase to provide real-time rooms. I'll be improving this project from now on to keep evolving my knowledge and maybe create something cool for people to use. Actually, I've made some small features on top of the boilerplate provided by the class, like PWA and dark mode support. But that's not all, I'm aiming to add [this feedback feature](https://github.com/SlyCooper-n/feedback-widget-nlw-08) inside this web app in the near future as well as CI with Github Actions.
+This project was developed together with [Rocketseat](https://github.com/Rocketseat), [Diego Fernandes](https://github.com/diego3g) and [Rodrigo](https://github.com/) in NLW #6 in order to practise web development using Next.js and Firebase to provide real-time rooms. I'll be improving this project from now on to keep evolving my knowledge and maybe create something cool for people to use. Actually, I've made some small features on top of the boilerplate provided by the class, like PWA and dark mode support. But that's not all, I'm aiming to add [this feedback feature](https://github.com/SlyCooper-n/feedback-widget-nlw-08) inside this web app in the near future as well as CI with Github Actions.
 </p>
 > For more information about my dev journey, consider visiting my [LinkedIn](https://linkedin.com/in/gabriel-vs-frasao).
 
@@ -50,9 +46,9 @@ Linters and Formatters
 
 ## :sparkles: Features
 
-- [x] Real-time rooms
-- [x] PWA support
-- [x] Theme based on device system
+- [x] Send and receive feedbacks
+- [x] Save feedbacks data on any database
+- [x] Automatic email sending on new feedback
 
 ## :rocket: Running this project
 
