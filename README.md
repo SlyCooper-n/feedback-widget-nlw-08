@@ -4,7 +4,7 @@
 
 [![Github](https://img.shields.io/badge/Gabe%20Frasz-Feedback%20Widget-gold?style=flat-square)](https://github.com/SlyCooper-n)
 [![Github issues](https://img.shields.io/github/issues/SlyCooper-n/feedback-widget-nlw-08?color=red&style=flat-square)](https://github.com/SlyCooper-n/feedback-widget-nlw-08/issues)
-[![GitHub license](https://img.shields.io/github/license/SlyCooper-n/feedback-widget-nlw-08?style=flat-square)](https://github.com/SlyCooper-n/feedback-widget-nlw-08/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/SlyCooper-n/feedback-widget-nlw-08?color=green&style=flat-square)](https://github.com/SlyCooper-n/feedback-widget-nlw-08/blob/main/LICENSE)
 ![Github commit](https://img.shields.io/github/last-commit/SlyCooper-n/feedback-widget-nlw-08?color=blue&style=flat-square)
 [![Github](https://img.shields.io/badge/-Rockeseat-purple?style=flat-square)](https://github.com/Rocketseat)
 
@@ -34,6 +34,15 @@ Base tools
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Prisma](https://www.prisma.io/)
+
+</details>
+
+<details>
+<summary>
+Styling
+</summary>
+
+- [Tailwind CSS](https://tailwindcss.com/)
 
 </details>
 
