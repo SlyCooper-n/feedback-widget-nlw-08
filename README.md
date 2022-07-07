@@ -43,6 +43,7 @@ Styling
 </summary>
 
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Phosphor Icons](https://phosphoricons.com/)
 
 </details>
 
