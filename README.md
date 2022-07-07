@@ -14,7 +14,7 @@
 
 <br />
 
-<img alt="Feedback Widget banner" src="./_docs/banner.jpeg" />
+<img alt="Feedback Widget banner" src="./_docs/banner.png" />
 
 ## :pushpin: About
 
