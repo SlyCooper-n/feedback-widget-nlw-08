@@ -13,6 +13,11 @@ app.use(routes);
 
 app.listen(port, () => {
   console.log(
-    "\nServer started on port 3333\nOpen in the browser: http://localhost:3333"
+    `\nServer started on port 3333
+    Open in the browser: ${
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:" + port
+        : "https://feedback-widget-nlw08-production.up.railway.app/"
+    }\n`
   );
 });
