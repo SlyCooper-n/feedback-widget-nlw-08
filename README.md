@@ -10,7 +10,13 @@
 
 </div>
 
+<br />
+
 > Project made together with Rockeseat to practise Node.js, database and mobile.
+
+| Status | Project |
+| --- | --- |
+| ![Github deployment](https://img.shields.io/github/deployments/slycooper-n/feedback-widget-nlw-08/production?label=railway&logo=railway&logoColor=white) | [Server](https://feedback-widget-nlw08-production.up.railway.app/) |
 
 <br />
 
