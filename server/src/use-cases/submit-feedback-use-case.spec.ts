@@ -16,7 +16,7 @@ describe("Submit Feedback", () => {
       submitFeedback.run({
         type: "BUG",
         comment: "This is a comment",
-        screenshot: "data:image/png/base64,example.com/screenshot.png",
+        screenshot: "data:image/png;base64,example.com/screenshot.png",
       })
     ).resolves.not.toThrow();
 
