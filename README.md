@@ -94,6 +94,24 @@ npm run dev
 
 Clone the repo as shown above :arrow_up: and follow [this little guide](https://github.com/SlyCooper-n/feedback-widget-nlw-08/blob/main/_docs/CONTRIBUTING.md)
 
+## :desktop_computer: Deploy
+
+The `server/` directory was deployed on [Railway](https://railway.app/) with this domain name: https://feedback-widget-nlw08-production.up.railway.app/
+
+### Routes
+
+Its only route at the moment is:
+
+- /feedbacks (POST)
+  - ```ts
+    // feedbacks route accepts this content on the body request
+    {
+      type: "BUG" | "IDEA" | "OTHER",
+      comment: string,
+      screenshot?: string, // screenshot format should be: "data:image/png;base64," + <base64_image> 
+    }
+    ```
+
 ## :memo: License
 
 [MIT License](https://github.com/SlyCooper-n/feedback-widget-nlw-08/blob/main/LICENSE) &copy; [Gabriel VS Frasão](https://github.com/SlyCooper-n)
