@@ -13,7 +13,7 @@ app.use(routes);
 
 app.listen(port, () => {
   console.log(
-    `\nServer started on port 3333
+    `\nServer started on port ${port}
     Open in the browser: ${
       process.env.NODE_ENV === "development"
         ? "http://localhost:" + port
