@@ -51,7 +51,7 @@ Styling
 
 <details>
 <summary>
-Linters and Formatter
+Linters and Formatters
 </summary>
 
 - [Prettier](https://prettier.io/)
