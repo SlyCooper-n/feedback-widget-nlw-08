@@ -26,7 +26,7 @@ This project was developed together with [Rocketseat](https://github.com/Rockets
 
 <details>
 <summary>
-Base tool
+Base tools
 </summary>
 
 - [Vite](https://vitejs.dev/)
